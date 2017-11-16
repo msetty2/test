@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="BasicApplicatioWithValidation" verbose="10" parallel="tests"
+	thread-count="1">
+
+	<!-- Put IP of localhost/Grid Hub machine -->
+	<parameter name="selenium.host" value="localhost" />
+
+	<!-- Put Port of localhost RC/Grid Hub machine -->
+	<parameter name="selenium.port" value="4444" />
+
+	<!-- Put target browser name as below: 1) Firefox : firefox 2) chrome : 
+		chrome 3) IExplorer : ie8 / ie9 -->
+	<parameter name="selenium.browser" value="chrome" />
+	<!-- <parameter name="selenium.url" value="http://google.com" /> -->
+
+	<parameter name="dataFileName" value="basicApplicationData" />
+	<parameter name="configFileName" value="basicApplicationConfig" />
+	<parameter name="ApplicationType" value="Wildlife Basic Licence" />
+	<parameter name="QueueName" value="Wildlife Licensing Queue" />
+
+	<listeners>
+	 <listener class-name="com.owls.utility.RetryTestListener" />
+	<listener class-name="com.owls.utility.RetryConterManagerListener" />
+	<listener class-name="com.owls.utility.CustomReporterListener" /> 
+	<listener class-name="com.owls.utility.CustomReporterTestFailureDetails" />
+	</listeners>
+	
+	 <test name="TC_Portal_001: To verify Online user submits a basic application with conditions to trigger the 'Review Application'  task.">
+		<classes>
+			<class name="com.owls.CreateApp.index.CreateApplicationIndex">
+				<methods>
+					<include name="verifyCreateApplication" />
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	<!--  <test name="TC_Portal_010: To verify Online user Online user gets 'Warning' message to Cancel Basic Application and Continue with Advance Application.">
+		<classes>
+			<class name="com.owls.CreateApp.index.CreateApplicationIndex">
+				<methods>
+					<include name="verifyWarningMessage" />
+				</methods>
+			</class>
+		</classes>
+	</test>   -->
+	  <test name="TC_CRM_001: To verify OWLS Internal user reviews the 'Review Application task.">
+		<classes>
+			<class name="com.owls.crm.index.CRMIndex">
+				<methods>
+					<include name="validateReviewAppliactionTask" />
+				</methods>
+			</class>
+		</classes>
+	</test>  
+	
+ 	<test name="TC_CRM_002: To verify OWLS Internal user to progress the 'Review Application' task to 'Interview/Site Inspection' task.">
+		<classes>
+			<class name="com.owls.crm.index.CRMIndex">
+				<methods>
+					<include name="completeReviewApplicationTask" />
+				</methods>
+			</class>
+		</classes>
+	</test>  
+	
+ 	<test name="TC_CRM_003: To verify Interview/Site inspection task to be available under Wildlife licencing queue and inpsecting screen to be available for the role -'Manager wildlife licencing'.">
+		<classes>
+			<class name="com.owls.crm.index.CRMIndex">
+				<methods>
+					<include name="completeInterviewInspectionTask" />
+				</methods>
+			</class>
+		</classes>
+	</test>   
+	
+	<test name="TC_CRM_004: To verify Delegate Office take the 'Approval By Delegate' task to 'Await payment confirmation' task.">
+		<classes>
+			<class name="com.owls.crm.index.CRMIndex">
+				<methods>
+					<include name="verifyAndCompleteApproveDelegateTask" />
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	
+ 	<test name="TC_Portal_002: To verify Payment Notice and Fee Pay links are generated and Payment Notice contains correct postal Address.">
+		<classes>
+			<class name="com.owls.CreateApp.index.CreateApplicationIndex">
+				<methods>
+					<include name="verifyPaymentNoticeAndAwaitingTask" />
+				</methods>
+			</class>
+		</classes>
+	</test>  
+	
+	<test name="TC_CRM_005: To verify OWLS internal user to complete 'Awaiting Payment Confirmation' task and to verify the Permit document is available for the online portal user to download.">
+		<classes>
+			<class name="com.owls.crm.index.CRMIndex">
+				<methods>
+					<include name="completeAwaitingPaymentConfirmationTask" />
+				</methods>
+			</class>
+		</classes>
+	</test>   
+	<test name="Test: Run Cleanup">
+		<classes>
+			<class name="com.owls.crm.index.CRMIndex">
+				<methods>
+					<include name="runCleanUp" />
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	
+</suite>

@@ -1,0 +1,123 @@
+<html>
+<head>
+<title>TestNG:  TC_CRM_016: To verify Interview/Site inspection task to be available under Wildlife licencing queue and inpsecting screen to be available for the role -'Manager wildlife licencing'.</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>TC_CRM_016: To verify Interview/Site inspection task to be available under Wildlife licencing queue and inpsecting screen to be available for the role -'Manager wildlife licencing'.</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Oct 16 17:09:25 IST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>331 seconds (331684 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.owls.crm.index.CRMIndex.completeAdvancedApplicationInterviewInspectionTask()'><b>completeAdvancedApplicationInterviewInspectionTask</b><br>Test class: com.owls.crm.index.CRMIndex<br/>
+<a href="#Output-1320217667" onClick='toggleBox("Output-1320217667", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1320217667" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1320217667">
+<strong> <h3 style="color:DarkViolet"> Testcase Id: TC_CRM_016</h3> </strong><br/>
+<strong> <h3 style="color:DarkViolet"> Testcase Name: To verify Interview/Site inspection task to be available under Wildlife licencing queue and inpsecting screen to be available for the role -'Manager wildlife licencing'.</h3> </strong><br/>
+<br><strong>Step 1 : Open CRM url:<a>https://owls-crm-qa.genixventures.com/index.php</a></strong></br><br/>
+<br><strong>Step 2 Choose 'Standard Authentication' login method from Drop down.</strong></br><br/>
+<br><strong>Step 3 Login to CRM as admin</strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;CRM User Name : IOAuto</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;CRM Password : dragon459</br><br/>
+<br><strong>Step 4 Feed the advance search options and filter current application :Wildlife Advanced Licence-Ankit ANKIT</strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Click on Task Menu.</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Click on Filter Icon.</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Click on 'Advanced Filter Option' button</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Click on 'Clear' button to clear existing filtered feeds.</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Enter 'Related To' option as 'Application'.</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Enter 'Application Subject' :Wildlife Advanced Licence-Ankit ANKIT</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Select Status : Created,Started</br><br/>
+<h3><b style='color:#1466B8'>&nbsp;&nbsp;&nbsp;Verify that Task status should be 'Interview/Site Inspection' </h3></b><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+<br><strong>Step 5 Click on Action link of Wildlife Advanced Licence-Ankit ANKIT</strong></br><br/>
+<br><strong>Step 6 Click on Start link to Start 'Interview/Site Inspection' task.</strong></br><br/>
+<h3><b style='color:#1466B8'>&nbsp;&nbsp;&nbsp;Verify that the user is redirected to Application Details Page and 'Interview/Site Inspection' panel is expanded to the user.</h3></b><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+<br><strong>Step 7 Complete 'INSPECTING OFFICER ASSESSMENT' form as below and click on Save button.</strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Assessment Date Entered : 16-10-2017</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Selected 'How' Assessment Option : Site Visit</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Entered Present Comment : Present_Comment_csRTzlSmTP</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Entered Comment Text: Comment_vkZrGMHVVB</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Entered Concern Comment: Concerns_Comment_AncarsPbvv</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Selected Delegate option:                                                    DO Auto                                                </br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Selected Recommendation Option: APPROVE</br><br/>
+<br><strong>Step 8 Click on 'Current Task' sub-panel.</strong></br><br/>
+<h3><b style='color:#1466B8'>&nbsp;&nbsp;&nbsp; Verify that 'Approval By Delegate' task is available in 'Current Task' sub-panel.</h3></b><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;<hr size='15px' noshade color='green'></br><br/>
+</div>
+</td>
+<td></td>
+<td>256</td>
+<td>com.owls.crm.index.CRMIndex@4b952a2d</td></tr>
+</table><p>
+</body>
+</html>

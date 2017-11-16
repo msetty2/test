@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="10" name="Failed suite [SpecimenCreateApplication]" parallel="tests">
+  <parameter name="selenium.port" value="4444"/>
+  <parameter name="ApplicationType" value="Wildlife Specimen Licence"/>
+  <parameter name="selenium.host" value="localhost"/>
+  <parameter name="configFileName" value="specimenApplicationNoValidationData"/>
+  <parameter name="selenium.browser" value="chrome"/>
+  <parameter name="QueueName" value="Wildlife Licensing Queue"/>
+  <listeners>
+    <listener class-name="com.owls.utility.RetryTestListener"/>
+    <listener class-name="com.owls.utility.RetryConterManagerListener"/>
+    <listener class-name="com.owls.utility.CustomReporterListener"/>
+    <listener class-name="com.owls.utility.CustomReporterTestFailureDetails"/>
+  </listeners>
+  <test name="TC_Portal_006: To verify that user is able to submite wildlife specimen licence application to OWLS portal without validation error.(failed)" parallel="tests">
+    <classes>
+      <class name="com.owls.crm.index.CRMIndex">
+        <methods>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.owls.crm.index.CRMIndex -->
+      <class name="com.owls.CreateApp.index.CreateApplicationIndex">
+        <methods>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="createApplicationWithoutError"/>
+        </methods>
+      </class> <!-- com.owls.CreateApp.index.CreateApplicationIndex -->
+    </classes>
+  </test> <!-- TC_Portal_006: To verify that user is able to submite wildlife specimen licence application to OWLS portal without validation error.(failed) -->
+  <test name="TC_CRM_011: To verify OWLS internal user reviews the &#039;Review Application&#039; task.(failed)" parallel="tests">
+    <classes>
+      <class name="com.owls.crm.index.CRMIndex">
+        <methods>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="completeAwaitingPaymentConfirmationTask"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.owls.crm.index.CRMIndex -->
+      <class name="com.owls.CreateApp.index.CreateApplicationIndex">
+        <methods>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.owls.CreateApp.index.CreateApplicationIndex -->
+    </classes>
+  </test> <!-- TC_CRM_011: To verify OWLS internal user reviews the 'Review Application' task.(failed) -->
+</suite> <!-- Failed suite [SpecimenCreateApplication] -->

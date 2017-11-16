@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="AdvanceCreateApplication" verbose="10" parallel="tests"
+	thread-count="1">
+
+	<!-- Put IP of localhost/Grid Hub machine -->
+	<parameter name="selenium.host" value="localhost" />
+
+	<!-- Put Port of localhost RC/Grid Hub machine -->
+	<parameter name="selenium.port" value="4444" />
+
+	<!-- Put target browser name as below: 1) Firefox : firefox 2) chrome : 
+		chrome 3) IExplorer : ie8 / ie9 -->
+	<parameter name="selenium.browser" value="chrome" />
+	<!-- <parameter name="selenium.url" value="http://google.com" /> -->
+	
+	<parameter name="configFileName" value="advancedApplicationNoValidationData" />
+	<parameter name="ApplicationType" value="Wildlife Advanced Licence" />
+	<parameter name="QueueName" value="Wildlife Licensing Queue" /> 
+	
+	<listeners>
+	<listener class-name="com.owls.utility.RetryTestListener" />
+	<listener class-name="com.owls.utility.RetryConterManagerListener" />
+	<listener class-name="com.owls.utility.CustomReporterTestDetails" />
+	<listener class-name="com.owls.utility.CustomReporterTestFailureDetails" />
+	</listeners>
+	
+	 <test name="TC_Portal_007: To verify Online user submits a advance application without any conditions which triggers 'Await Payment Confirmation' task.">
+		<classes>
+			<class name="com.owls.CreateApp.index.CreateApplicationIndex">
+				<methods>
+					<include name="createApplicationWithoutError" />
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	<test name="TC_CRM_013: To verify OWLS internal user to complete 'Awaiting Payment Confirmation' task and to verify the Permit document is available for the online portal user to download.">
+		<classes>
+			<class name="com.owls.crm.index.CRMIndex">
+				<methods>
+					<include name="completeAwaitingPaymentConfirmationTask" />
+				</methods>
+			</class>
+		</classes>
+	</test>  
+	<test name="Test: Run Cleanup">
+		<classes>
+			<class name="com.owls.crm.index.CRMIndex">
+				<methods>
+					<include name="runCleanUp" />
+				</methods>
+			</class>
+		</classes>
+	</test> 
+</suite>

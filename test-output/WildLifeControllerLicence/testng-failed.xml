@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="10" name="Failed suite [WildLifeControllerLicence]" parallel="tests">
+  <parameter name="selenium.port" value="4444"/>
+  <parameter name="ApplicationType" value="Wildlife Controller Licence"/>
+  <parameter name="selenium.host" value="localhost"/>
+  <parameter name="configFileName" value="wildlifeControllerApplicationConfig"/>
+  <parameter name="selenium.browser" value="chrome"/>
+  <parameter name="QueueName" value="Wildlife Licensing Queue"/>
+  <listeners>
+    <listener class-name="com.owls.utility.RetryTestListener"/>
+    <listener class-name="com.owls.utility.RetryConterManagerListener"/>
+    <listener class-name="com.owls.utility.CustomReporterListener"/>
+    <listener class-name="com.owls.utility.CustomReporterTestFailureDetails"/>
+  </listeners>
+  <test name="TC_Portal_0013: To verify Online user submits a wildlife Controller application with conditions to trigger the &#039;Review Application&#039;  task.(failed)" parallel="tests">
+    <classes>
+      <class name="com.owls.corporate.index.CorporateApplicationIndex">
+        <methods>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="tearDown"/>
+          <include name="verifyCreateCorporateApplication"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.owls.corporate.index.CorporateApplicationIndex -->
+    </classes>
+  </test> <!-- TC_Portal_0013: To verify Online user submits a wildlife Controller application with conditions to trigger the 'Review Application'  task.(failed) -->
+</suite> <!-- Failed suite [WildLifeControllerLicence] -->

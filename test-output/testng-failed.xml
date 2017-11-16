@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="10" name="Failed suite [BasicCreateApplication]" parallel="tests">
+  <parameter name="selenium.port" value="4444"/>
+  <parameter name="ApplicationType" value="Wildlife Basic Licence"/>
+  <parameter name="selenium.host" value="localhost"/>
+  <parameter name="configFileName" value="basicApplicationNoValidationData"/>
+  <parameter name="selenium.browser" value="chrome"/>
+  <parameter name="QueueName" value="Wildlife Licensing Queue"/>
+  <listeners>
+    <listener class-name="com.owls.utility.RetryTestListener"/>
+    <listener class-name="com.owls.utility.RetryConterManagerListener"/>
+    <listener class-name="com.owls.utility.CustomReporterListener"/>
+    <listener class-name="com.owls.utility.CustomReporterTestFailureDetails"/>
+  </listeners>
+  <test name="TC_Portal_005: To verify Online user submits a basic application without conditions which triggers &#039;Await Payment Confirmation&#039; task.(failed)" parallel="tests">
+    <classes>
+      <class name="com.owls.crm.index.CRMIndex">
+        <methods>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.owls.crm.index.CRMIndex -->
+      <class name="com.owls.CreateApp.index.CreateApplicationIndex">
+        <methods>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="createApplicationWithoutError"/>
+        </methods>
+      </class> <!-- com.owls.CreateApp.index.CreateApplicationIndex -->
+    </classes>
+  </test> <!-- TC_Portal_005: To verify Online user submits a basic application without conditions which triggers 'Await Payment Confirmation' task.(failed) -->
+  <test name="TC_CRM_011: To verify OWLS internal user to complete &#039;Awaiting Payment Confirmation&#039; task and to verify the Permit document is available for the online portal user to download.(failed)" parallel="tests">
+    <classes>
+      <class name="com.owls.crm.index.CRMIndex">
+        <methods>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="completeAwaitingPaymentConfirmationTask"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.owls.crm.index.CRMIndex -->
+      <class name="com.owls.CreateApp.index.CreateApplicationIndex">
+        <methods>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.owls.CreateApp.index.CreateApplicationIndex -->
+    </classes>
+  </test> <!-- TC_CRM_011: To verify OWLS internal user to complete 'Awaiting Payment Confirmation' task and to verify the Permit document is available for the online portal user to download.(failed) -->
+  <test name="Test: Run Cleanup(failed)" parallel="tests">
+    <classes>
+      <class name="com.owls.crm.index.CRMIndex">
+        <methods>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="runCleanUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.owls.crm.index.CRMIndex -->
+      <class name="com.owls.CreateApp.index.CreateApplicationIndex">
+        <methods>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.owls.CreateApp.index.CreateApplicationIndex -->
+    </classes>
+  </test> <!-- Test: Run Cleanup(failed) -->
+</suite> <!-- Failed suite [BasicCreateApplication] -->

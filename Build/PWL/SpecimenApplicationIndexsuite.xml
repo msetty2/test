@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="SpecimenCreateApplication" verbose="10" parallel="tests"
+	thread-count="1">
+
+	<!-- Put IP of localhost/Grid Hub machine -->
+	<parameter name="selenium.host" value="localhost" />
+
+	<!-- Put Port of localhost RC/Grid Hub machine -->
+	<parameter name="selenium.port" value="4444" />
+
+	<!-- Put target browser name as below: 1) Firefox : firefox 2) chrome : 
+		chrome 3) IExplorer : ie8 / ie9 -->
+	<parameter name="selenium.browser" value="chrome" />
+	<!-- <parameter name="selenium.url" value="http://google.com" /> -->
+
+	<parameter name="configFileName" value="specimenApplicationNoValidationData" />
+	<parameter name="ApplicationType" value="Wildlife Specimen Licence" />
+	<parameter name="QueueName" value="Wildlife Licensing Queue" /> 
+
+	<listeners>
+	<listener class-name="com.owls.utility.RetryTestListener" />
+	<listener class-name="com.owls.utility.RetryConterManagerListener" />
+	<listener class-name="com.owls.utility.CustomReporterListener" />
+	<listener class-name="com.owls.utility.CustomReporterTestFailureDetails" />
+	</listeners>  
+
+	
+	  <test name="TC_Portal_006: To verify that user is able to submite wildlife specimen licence application to OWLS portal without validation error.">
+		<classes>
+			<class name="com.owls.CreateApp.index.CreateApplicationIndex">
+				<methods>
+					<include name="createApplicationWithoutError" />
+				</methods>
+			</class>
+		</classes>
+	</test>  
+	 
+	  <test name="TC_CRM_011: To verify OWLS internal user reviews the 'Review Application' task.">
+		<classes>
+			<class name="com.owls.crm.index.CRMIndex">
+				<methods>
+					<include name="completeAwaitingPaymentConfirmationTask" />
+				</methods>
+			</class>
+		</classes> 
+	</test> 
+	<test name="Test: Run Cleanup">
+		<classes>
+			<class name="com.owls.crm.index.CRMIndex">
+				<methods>
+					<include name="runCleanUp" />
+				</methods>
+			</class>
+		</classes>
+	</test> 
+</suite>

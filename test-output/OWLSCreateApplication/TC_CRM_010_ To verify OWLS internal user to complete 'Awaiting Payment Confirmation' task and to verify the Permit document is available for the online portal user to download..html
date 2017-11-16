@@ -1,0 +1,123 @@
+<html>
+<head>
+<title>TestNG:  TC_CRM_010: To verify OWLS internal user to complete 'Awaiting Payment Confirmation' task and to verify the Permit document is available for the online portal user to download.</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>TC_CRM_010: To verify OWLS internal user to complete 'Awaiting Payment Confirmation' task and to verify the Permit document is available for the online portal user to download.</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Oct 11 09:37:01 IST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>535 seconds (535319 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.owls.crm.index.CRMIndex.completeSpecimenPaymentNoticeAndAwaitingTask()'><b>completeSpecimenPaymentNoticeAndAwaitingTask</b><br>Test class: com.owls.crm.index.CRMIndex<br/>
+<a href="#Output-1015531558" onClick='toggleBox("Output-1015531558", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1015531558" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1015531558">
+<strong> <h3 style="color:DarkViolet"> Testcase Id: TC_CRM_010</h3> </strong><br/>
+<strong> <h3 style="color:DarkViolet"> Testcase Name: To verify OWLS internal user to complete 'Awaiting Payment Confirmation' task and to verify the Permit document is available for the online portal user to download.</h3> </strong><br/>
+<br><strong>Step 1 : Open portal url:<a>https://owls-portal-qa.genixventures.com/user/login</a></strong></br><br/>
+<br><strong>Step 2 Enter Username.</strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; Portal UserName: ankit.patel</br><br/>
+<br><strong>Step 3 Enter Password.</strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; Password: Ankit@123</br><br/>
+<br><strong>Step 4 Click on Login icon.</strong></br><br/>
+<br><strong>Step 5 Click on Personal Menu.</strong></br><br/>
+<br><strong>Step 6 Click on Permit Menu.</strong></br><br/>
+<br><strong>Step 7 Get current number of Permit records.</strong></br><br/>
+<br><strong>Step 8 : Open CRM url:<a>https://owls-crm-qa.genixventures.com/index.php</a></strong></br><br/>
+<br><strong>Step 9 Choose 'Standard Authentication' login method from Drop down.</strong></br><br/>
+<br><strong>Step 10 Login to CRM as admin</strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;CRM User Name : admin</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;CRM Password : dragon459</br><br/>
+<br><strong>Step 11Advance search filter feeding with Application Name(Wildlife Specimen Licence-Ankit ANKIT) and short Task in desanding order according to date created.</strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Click on Task Menu.</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Click on Filter Icon.</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Click on 'Advanced Filter Option' button</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Click on 'Clear' button to clear existing filtered feeds.</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Enter 'Related To' option as 'Application'.</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Enter 'Application Subject' :Wildlife Specimen Licence-Ankit ANKIT</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp; -> Select Status : Created,Started</br><br/>
+<h3><b style='color:#1466B8'>&nbsp;&nbsp;&nbsp;Verify that Task status of application 'Wildlife Specimen Licence-Ankit ANKIT' should be 'Await payment confirmation' </h3></b><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+<br><strong>Step 12 Click on Action link of Wildlife Specimen Licence-Ankit ANKIT</strong></br><br/>
+<br><strong>Step 13 Click on Start link to Start 'Approval By Delegate' task.</strong></br><br/>
+<br><strong>Step 14 Click on Business Process icon available on the top right corner.</strong></br><br/>
+<br><strong>Step 15 Choose 'Approved' Option to complete 'Await payment confirmation' task.</strong></br><br/>
+<h3><b style='color:#1466B8'>&nbsp;&nbsp;&nbsp;Verify that the number of permit records are increased to 1.</h3></b><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;<hr size='15px' noshade color='green'></br><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+</div>
+</td>
+<td></td>
+<td>488</td>
+<td>com.owls.crm.index.CRMIndex@7e0b0338</td></tr>
+</table><p>
+</body>
+</html>

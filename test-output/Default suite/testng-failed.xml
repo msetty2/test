@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.owls.CreateApp.index.CreateApplicationIndex">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyWarningMessage"/>
+          <include name="SubmitApplication_Wildlife_Specimen_Licence"/>
+          <include name="verifySpecimenAppPaymentNoticeAndAwaitingTask"/>
+          <include name="createApplicationWithoutError"/>
+          <include name="createSpecimenApplicationWithoutError"/>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="verifyCreateSpecimenApplication"/>
+          <include name="verifyBasicApplicationWarning"/>
+          <include name="verifyPaymentNoticeAndAwaitingTask"/>
+          <include name="verifyDingoAppPaymentNoticeAndAwaitingTask"/>
+          <include name="verifyAdvancedAppPaymentNoticeAndAwaitingTask"/>
+          <include name="verifyAdvancedApplicationWarning"/>
+          <include name="verifyCreateApplication"/>
+          <include name="verifyCreateDingoApplication"/>
+          <include name="setUp"/>
+          <include name="SubmitApplication_Wildlife_Basic_Licence"/>
+          <include name="createAdvancedApplicationWithoutError"/>
+          <include name="verifyCreateAdvancedApplication"/>
+        </methods>
+      </class> <!-- com.owls.CreateApp.index.CreateApplicationIndex -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
