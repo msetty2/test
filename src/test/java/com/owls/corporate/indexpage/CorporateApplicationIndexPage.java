@@ -1,10 +1,10 @@
 package com.owls.corporate.indexpage;
 
-<<<<<<< HEAD
+
 ////\\\\]]ll77
-=======
+
 ////\\\\]]tt
->>>>>>> refs/remotes/origin/branch-1
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
